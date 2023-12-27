@@ -1,6 +1,5 @@
 ﻿using DesafioPOO.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
 Smartphone nokia = new Nokia("99999", "modelo x3", "66666", 10);
 nokia.Ligar("63635353");
 nokia.InstalarAplicativo("ZAP-Zap");
