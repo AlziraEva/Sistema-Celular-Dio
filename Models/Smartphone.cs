@@ -1,29 +1,32 @@
+using System.Reflection.PortableExecutable;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
         public string Numero { get; set; }
         private string modelo;
-        private string imei;
-        private int memoria;
+        private int memoriaRam;
+        private int memoriaInterna;
 
-        public Smartphone(string numero, string modeloCel, string imeiCel, int memoriaCel)
+        public Smartphone(string numero, string modeloCel, int memoriaRamCel, int memoriaInternaCel)
         {
             Numero = numero;
             modelo = modeloCel;
-            imei = imeiCel;
-            memoria = memoriaCel;
+
+            memoriaRam = memoriaRamCel;
+            memoriaInterna = memoriaInternaCel;
         }
 
         public void Informacoes()
         {
             Console.WriteLine
-            ($"Informações do celular: Numero: {Numero}, Modelo: {modelo}, Imei: {imei}, Memória: {memoria}.");
+            ($"Informações do celular: Numero: {Numero}, Modelo: {modelo}, Memória Ram: {memoriaRam}, Memória interna: {memoriaInterna}.");
         }
 
-        public void Ligar(string numeroligar)
+        public void Ligar()
         {
-            Console.WriteLine($"Ligando para o número {numeroligar}");
+            Console.WriteLine($"Ligando...");
         }
 
         public void ReceberLigacao()
