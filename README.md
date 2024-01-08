@@ -2,7 +2,7 @@
 ![status](https://img.shields.io/badge/status-%20concluido-green)
 
 ## 📝Sobre o Projeto
- Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas duas classes, Sendo elas a classe 'Pai' denominada Smartphone fornecendo uma estrutura comum para as subclasses e a classe 'filha' chamada Marcas, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para várias marcas de Smartphones.
+ Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas duas classes, Sendo elas a classe abstrata 'Pai' denominada Smartphone fornecendo uma estrutura comum para as subclasses e a classe 'filha' chamada Marcas, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para várias marcas de Smartphones.
 
 ## 🔄 Funcionalidades
 - Criação de um sistema Smartphone com número, modelo, memória RAM, memória interna e marca.
