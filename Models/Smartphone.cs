@@ -13,7 +13,6 @@ namespace DesafioPOO.Models
         {
             Numero = numero;
             modelo = modeloCel;
-
             memoriaRam = memoriaRamCel;
             memoriaInterna = memoriaInternaCel;
         }
