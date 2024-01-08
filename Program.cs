@@ -3,7 +3,7 @@
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 Console.WriteLine($@"Olá sou a Eva, sua assistente virtual,
-Seja muito bem vindo(a) a criação de sistemas de Smartphones.
+Seja muito bem vindo(a) a criação de um sistema para Smartphone.
 (Pressione a tecla 'Enter' para continuar.)");
 Console.ReadLine();
 Console.Clear();
@@ -11,7 +11,6 @@ Console.Clear();
 Console.WriteLine($@"Qual número do seu Chip:");
 string numero = Console.ReadLine();
 Console.Clear();
-
 
 Console.WriteLine($@"Me diga o modelo que deseja obter:");
 string modelo = Console.ReadLine();
@@ -48,8 +47,8 @@ do
     Console.WriteLine($@"Pressione a tecla 'Enter' para continuar.");
     Console.ReadLine();
     Console.Clear();
-}
-while (memoriaRam == 0);
+
+} while (memoriaRam == 0);
 Console.Clear();
 
 int memoriaInterna = 0;
@@ -83,8 +82,7 @@ do
     Console.ReadLine();
     Console.Clear();
 
-}
-while (memoriaInterna == 0);
+} while (memoriaInterna == 0);
 Console.Clear();
 
 string marca = "";
@@ -168,4 +166,5 @@ while (exibirMenu)
     Console.WriteLine("Pressione a tecla 'Enter' para continuar");
     Console.ReadLine();
     Console.Clear();
+
 }
