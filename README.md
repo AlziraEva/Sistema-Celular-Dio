@@ -2,10 +2,7 @@
 ![status](https://img.shields.io/badge/status-%20concluido-green)
 
 ## 📝Sobre o Projeto
- Responsável por modelar um sistema que trabalha com celulares. Para isso, foi implementado uma abstração de um celular e disponibilizando maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone.
-
-## Modelo do Projeto
-![Diagrama classes](Imagens/diagrama.png)
+ Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas duas classes, Sendo elas a classe 'Pai' denominada Smartphone fornecendo uma estrutura comum para as subclasses e a classe 'filha' chamada Marcas, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para várias marcas de Smartphones.
 
 ## 🔄 Funcionalidades
 - Ligar para um número especifico
@@ -16,7 +13,7 @@
 ## 📌 Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
 2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+3. O método **InstalarAplicativo** deve ser sobrescrito na classe Marca, pois cada marca de smartphone possue diferentes maneiras de instalar um aplicativo.
 
 ## ⚙Tecnologias e Linguagens Utilizadas
 <div>
