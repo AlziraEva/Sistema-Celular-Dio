@@ -5,14 +5,15 @@
  Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas duas classes, Sendo elas a classe 'Pai' denominada Smartphone fornecendo uma estrutura comum para as subclasses e a classe 'filha' chamada Marcas, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para várias marcas de Smartphones.
 
 ## 🔄 Funcionalidades
-- Ligar para um número especifico
+- Criação de um sistema Smartphone com número, modelo, memória RAM, memória interna e marca.
+- Realizar Ligação
 - Receber ligação
 - Instalar aplicativo
-- informações do celular
+- Resumo sobre o sistema criado
 
 ## 📌 Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
+2. A classe **Marca** deve ser classe filha de Smartphone.
 3. O método **InstalarAplicativo** deve ser sobrescrito na classe Marca, pois cada marca de smartphone possue diferentes maneiras de instalar um aplicativo.
 
 ## ⚙Tecnologias e Linguagens Utilizadas
