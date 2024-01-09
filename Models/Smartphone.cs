@@ -9,6 +9,7 @@ namespace DesafioPOO.Models
         protected int memoriaRam { get; set; }
         protected int memoriaInterna { get; set; }
         protected string marca { get; set; }
+        protected List<string> aplicativos = new List<string>();
 
         public Smartphone()
         {
@@ -21,6 +22,7 @@ namespace DesafioPOO.Models
             memoriaRam = memoriaRamCel;
             memoriaInterna = memoriaInternaCel;
             marca = marcaCel;
+
         }
 
         public void Informacoes()
@@ -40,6 +42,23 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+
+        public void ListarAplicativos()
+        {
+            if (aplicativos.Any())
+            {
+                Console.WriteLine($"Os aplicativos instalados no {marca} - {modelo} foram:");
+
+                foreach (string item in aplicativos)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Não há aplicativos instalados no {marca} - {modelo}.");
+            }
+        }
 
     }
 }

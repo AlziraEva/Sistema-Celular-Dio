@@ -133,7 +133,8 @@ while (exibirMenu)
     2 - Realizar chamada 
     3 - Receber chamada telefonica
     4 - Instalar Aplicativo
-    5 - Encerrar");
+    5 - Listar Aplicativos instalados
+    6 - Encerrar");
 
     switch (Console.ReadLine())
     {
@@ -156,6 +157,10 @@ while (exibirMenu)
             break;
 
         case "5":
+            sistemaNovo.ListarAplicativos();
+            break;
+
+        case "6":
             exibirMenu = false;
             break;
 
