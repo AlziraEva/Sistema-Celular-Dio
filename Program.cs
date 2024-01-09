@@ -85,6 +85,7 @@ do
 } while (memoriaInterna == 0);
 Console.Clear();
 
+Smartphone sistemaNovo = new Nokia();
 string marca = "";
 do
 {
@@ -96,10 +97,12 @@ do
     {
         case "1":
             marca = "Nokia";
+            sistemaNovo = new Nokia(numero, modelo, memoriaRam, memoriaInterna, marca);
             break;
 
         case "2":
             marca = "Iphone";
+            sistemaNovo = new Iphone(numero, modelo, memoriaRam, memoriaInterna, marca);
             break;
 
         default:
@@ -112,8 +115,6 @@ do
 
 } while (marca == "");
 Console.Clear();
-
-Smartphone sistemaNovo = new Marcas(numero, modelo, memoriaRam, memoriaInterna, marca);
 
 Console.WriteLine($@"Muito bem, seu Smartphone está ficando lindão *.*
 Aguarde só alguns instantes...

@@ -5,22 +5,28 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        private string modelo;
-        private int memoriaRam;
-        private int memoriaInterna;
+        protected string modelo { get; set; }
+        protected int memoriaRam { get; set; }
+        protected int memoriaInterna { get; set; }
+        protected string marca { get; set; }
 
-        public Smartphone(string numero, string modeloCel, int memoriaRamCel, int memoriaInternaCel)
+        public Smartphone()
+        {
+        }
+
+        public Smartphone(string numero, string modeloCel, int memoriaRamCel, int memoriaInternaCel, string marcaCel)
         {
             Numero = numero;
             modelo = modeloCel;
             memoriaRam = memoriaRamCel;
             memoriaInterna = memoriaInternaCel;
+            marca = marcaCel;
         }
 
         public void Informacoes()
         {
             Console.WriteLine
-            ($"Informações do celular: Numero: {Numero}, Modelo: {modelo}, Memória Ram: {memoriaRam}, Memória interna: {memoriaInterna}.");
+            ($"Informações do celular: Marca: {marca}, Numero: {Numero}, Modelo: {modelo}, Memória Ram: {memoriaRam}, Memória interna: {memoriaInterna}.");
         }
 
         public void Ligar()
@@ -34,5 +40,6 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+
     }
 }
