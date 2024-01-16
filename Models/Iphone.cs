@@ -11,8 +11,8 @@ namespace DesafioPOO.Models
         public Iphone()
         {
         }
-        public Iphone(string Numero, string modelo, int memoriaRam, int memoriaInterna, string marca)
-      : base(Numero, modelo, memoriaRam, memoriaInterna, marca)
+        public Iphone(string numero, string modelo, int memoriaRam, int memoriaInterna, string marca)
+      : base(numero, modelo, memoriaRam, memoriaInterna, marca)
         {
         }
         public override void InstalarAplicativo(string nomeApp)
@@ -28,13 +28,13 @@ namespace DesafioPOO.Models
 
             if (pagarTaxa == "1")
             {
-                aplicativos.Add(nomeApp);
+                Aplicativos.Add(nomeApp);
 
-                Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no seu Iphone - {modelo}");
+                Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no seu Iphone - {Modelo}");
             }
             else
             {
-                Console.WriteLine($"Não foi possivel instalar o aplicativo {nomeApp} no seu Iphone - {modelo}");
+                Console.WriteLine($"Não foi possivel instalar o aplicativo {nomeApp} no seu Iphone - {Modelo}");
             }
 
         }

@@ -5,30 +5,30 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        protected string modelo { get; set; }
-        protected int memoriaRam { get; set; }
-        protected int memoriaInterna { get; set; }
-        protected string marca { get; set; }
-        protected List<string> aplicativos = new List<string>();
+        protected string Modelo { get; set; }
+        protected int MemoriaRam { get; set; }
+        protected int MemoriaInterna { get; set; }
+        protected string Marca { get; set; }
+        protected List<string> Aplicativos = new List<string>();
 
         public Smartphone()
         {
         }
 
-        public Smartphone(string numero, string modeloCel, int memoriaRamCel, int memoriaInternaCel, string marcaCel)
+        public Smartphone(string numero, string modelo, int memoriaRam, int memoriaInterna, string marca)
         {
             Numero = numero;
-            modelo = modeloCel;
-            memoriaRam = memoriaRamCel;
-            memoriaInterna = memoriaInternaCel;
-            marca = marcaCel;
+            Modelo = modelo;
+            MemoriaRam = memoriaRam;
+            MemoriaInterna = memoriaInterna;
+            Marca = marca;
 
         }
 
         public void Informacoes()
         {
             Console.WriteLine
-            ($"Informações do celular: Marca: {marca}, Numero: {Numero}, Modelo: {modelo}, Memória Ram: {memoriaRam}, Memória interna: {memoriaInterna}.");
+            ($"Informações do celular: Marca: {Marca}, Numero: {Numero}, Modelo: {Modelo}, Memória Ram: {MemoriaRam}, Memória interna: {MemoriaInterna}.");
         }
 
         public void Ligar()
@@ -45,18 +45,18 @@ namespace DesafioPOO.Models
 
         public void ListarAplicativos()
         {
-            if (aplicativos.Any())
+            if (Aplicativos.Any())
             {
-                Console.WriteLine($"Os aplicativos instalados no {marca} - {modelo} foram:");
+                Console.WriteLine($"Os aplicativos instalados no {Marca} - {Modelo} foram:");
 
-                foreach (string item in aplicativos)
+                foreach (string item in Aplicativos)
                 {
                     Console.WriteLine(item);
                 }
             }
             else
             {
-                Console.WriteLine($"Não há aplicativos instalados no {marca} - {modelo}.");
+                Console.WriteLine($"Não há aplicativos instalados no {Marca} - {Modelo}.");
             }
         }
 
