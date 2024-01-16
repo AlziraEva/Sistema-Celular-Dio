@@ -2,19 +2,20 @@
 ![status](https://img.shields.io/badge/status-%20concluido-green)
 
 ## 📝Sobre o Projeto
- Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas duas classes, Sendo elas a classe abstrata 'Pai' denominada Smartphone fornecendo uma estrutura comum para as subclasses e a classe 'filha' chamada Marcas, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para várias marcas de Smartphones.
+ Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas uma classe abstrata denominada Smartphone fornecendo uma estrutura comum para as subclasses Iphone e Nokia, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para 2 marcas de Smartphones.
 
 ## 🔄 Funcionalidades
-- Criação de um sistema Smartphone com número, modelo, memória RAM, memória interna e marca.
+- Criação de um sistema Smartphone com as propriedades número, modelo, memória RAM, memória interna e marca.
 - Realizar Ligação
 - Receber ligação
 - Instalar aplicativo
 - Resumo sobre o sistema criado
+- Listagem dos aplicativos instalados
 
 ## 📌 Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Marca** deve ser classe filha de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Marca, pois cada marca de smartphone possue diferentes maneiras de instalar um aplicativo.
+2. As classe **Iphone** e **Nokia** devem ser classes filhas de Smartphone.
+3. O método **InstalarAplicativo** deve ser sobrescrito nas subclasses Iphone e Nokia, pois cada marca de smartphone possue diferentes maneiras de instalar um aplicativo.
 
 ## ⚙Tecnologias e Linguagens Utilizadas
 <div>
