@@ -3,6 +3,7 @@
 
 ## 📝Sobre o Projeto
 O projeto foi criado para desenvolver um sistema de smartphones, utilizando uma abordagem de programação orientada a objetos. Para alcançar isso, foi implementada uma classe abstrata central chamada "Smartphone", proporcionando uma estrutura comum para suas subclasses, nomeadamente "Iphone" e "Nokia". Essa estrutura abstrata permitiu que diferentes marcas de smartphones tivessem comportamentos distintos, promovendo uma abordagem eficiente de reutilização de código.
+<br>
 O projeto foi desenvolvido no ambiente .NET, utilizando o console de gerenciamento. No âmbito desse sistema, foi realizado o mapeamento de uma classe abstrata que representa características genéricas de smartphones, juntamente com classes específicas para as marcas "Iphone" e "Nokia". Essa abordagem não apenas facilitou a extensibilidade do sistema para futuras marcas, mas também proporcionou uma base sólida para incorporar novas funcionalidades e comportamentos específicos de cada modelo de smartphone. O uso da programação orientada a objetos demonstrou-se fundamental para a organização modular do código, promovendo a manutenção e a escalabilidade do sistema.
 
 ## 🔄 Funcionalidades
@@ -51,7 +52,7 @@ title="Git" width="50" height="50"/>
  
 5. Abra um pull request neste repositório
 
-## 👩‍💻Autores
+## 👩‍💻Autora
 
 - [Alzira Eva](https://github.com/AlziraEva)👩
 
