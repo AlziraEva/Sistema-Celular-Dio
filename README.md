@@ -2,7 +2,8 @@
 ![status](https://img.shields.io/badge/status-%20concluido-green)
 
 ## 📝Sobre o Projeto
- Foi realizado um projeto responsável por fazer a criação de um sistema para celular. Para isso, foram implementadas uma classe abstrata denominada Smartphone fornecendo uma estrutura comum para as subclasses Iphone e Nokia, disponibilizando maneiras de diferentes marcas terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos. Foi criado um sistema em .NET, do tipo console, mapeando uma classe abstrata e classe específica para 2 marcas de Smartphones.
+O projeto foi criado para desenvolver um sistema de smartphones, utilizando uma abordagem de programação orientada a objetos. Para alcançar isso, foi implementada uma classe abstrata central chamada "Smartphone", proporcionando uma estrutura comum para suas subclasses, nomeadamente "Iphone" e "Nokia". Essa estrutura abstrata permitiu que diferentes marcas de smartphones tivessem comportamentos distintos, promovendo uma abordagem eficiente de reutilização de código.
+O projeto foi desenvolvido no ambiente .NET, utilizando o console de gerenciamento. No âmbito desse sistema, foi realizado o mapeamento de uma classe abstrata que representa características genéricas de smartphones, juntamente com classes específicas para as marcas "Iphone" e "Nokia". Essa abordagem não apenas facilitou a extensibilidade do sistema para futuras marcas, mas também proporcionou uma base sólida para incorporar novas funcionalidades e comportamentos específicos de cada modelo de smartphone. O uso da programação orientada a objetos demonstrou-se fundamental para a organização modular do código, promovendo a manutenção e a escalabilidade do sistema.
 
 ## 🔄 Funcionalidades
 - Criação de um sistema Smartphone com as propriedades número, modelo, memória RAM, memória interna e marca.
