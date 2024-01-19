@@ -18,10 +18,18 @@ namespace DesafioPOO.Models
         {
             Console.WriteLine("Informe o nome do aplicativo que deseja instalar:");
             string nomeApp = Console.ReadLine();
+            if (MemoriaInterna >= 1)
+            {
+                Aplicativos.Add(nomeApp);
+                MemoriaInterna -= 1;
 
-            Aplicativos.Add(nomeApp);
-
-            Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no Nokia - {Modelo}");
+                Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no {Marca} - {Modelo}");
+            }
+            else
+            {
+                Console.WriteLine($@"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente para a instalação,
+                Caso deseje, pode liberar espaço desistalando algum dos aplicativos existentes.");
+            }
         }
     }
 }

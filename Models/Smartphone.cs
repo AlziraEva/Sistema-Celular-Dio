@@ -51,6 +51,7 @@ namespace DesafioPOO.Models
             if (Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
             {
                 Aplicativos.Remove(nomeApp);
+                MemoriaInterna += 1;
                 Console.WriteLine($"Aplicativo {nomeApp} foi removido com sucesso do seu {Marca} - {Modelo}");
             }
             else
