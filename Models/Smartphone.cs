@@ -41,7 +41,23 @@ namespace DesafioPOO.Models
             Console.WriteLine("Recebendo ligação...");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo();
+
+        public void DesistalarAplicativo()
+        {
+            Console.WriteLine("Digite o nome do aplicativo que deseja remover");
+            string nomeApp = Console.ReadLine();
+
+            if (Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
+            {
+                Aplicativos.Remove(nomeApp);
+                Console.WriteLine($"Aplicativo {nomeApp} foi removido com sucesso do seu {Marca} - {Modelo}");
+            }
+            else
+            {
+                Console.WriteLine($"O aplicativo {nomeApp} não está instalado, por isso não será possivel remove-lo");
+            }
+        }
 
         public void ListarAplicativos()
         {

@@ -134,7 +134,8 @@ while (exibirMenu)
     3 - Receber chamada telefonica
     4 - Instalar Aplicativo
     5 - Listar Aplicativos instalados
-    6 - Encerrar");
+    6 - Desistalar Aplicativo
+    7 - Encerrar");
 
     switch (Console.ReadLine())
     {
@@ -151,9 +152,8 @@ while (exibirMenu)
             break;
 
         case "4":
-            Console.WriteLine("Informe o nome do aplicativo que deseja instalar:");
-            string aplicativo = Console.ReadLine();
-            sistemaNovo.InstalarAplicativo(aplicativo);
+
+            sistemaNovo.InstalarAplicativo();
             break;
 
         case "5":
@@ -161,6 +161,10 @@ while (exibirMenu)
             break;
 
         case "6":
+            sistemaNovo.DesistalarAplicativo();
+            break;
+
+        case "7":
             exibirMenu = false;
             break;
 

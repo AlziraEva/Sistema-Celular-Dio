@@ -15,8 +15,10 @@ namespace DesafioPOO.Models
       : base(numero, modelo, memoriaRam, memoriaInterna, marca)
         {
         }
-        public override void InstalarAplicativo(string nomeApp)
+        public override void InstalarAplicativo()
         {
+            Console.WriteLine("Informe o nome do aplicativo que deseja instalar:");
+            string nomeApp = Console.ReadLine();
 
             Console.WriteLine(@$"Ao prosseguir com a instalação será paga uma taxa de R$ 25,00
              deseja continuar?

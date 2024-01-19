@@ -14,9 +14,13 @@ namespace DesafioPOO.Models
       : base(numero, modelo, memoriaRam, memoriaInterna, marca)
         {
         }
-        public override void InstalarAplicativo(string nomeApp)
+        public override void InstalarAplicativo()
         {
+            Console.WriteLine("Informe o nome do aplicativo que deseja instalar:");
+            string nomeApp = Console.ReadLine();
+
             Aplicativos.Add(nomeApp);
+
             Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no Nokia - {Modelo}");
         }
     }
