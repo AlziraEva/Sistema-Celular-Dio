@@ -62,7 +62,7 @@ do
     switch (Console.ReadLine())
     {
         case "1":
-            memoriaInterna = 2;
+            memoriaInterna = 64;
             break;
 
         case "2":
