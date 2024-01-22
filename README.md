@@ -13,6 +13,7 @@ O projeto foi desenvolvido no ambiente .NET, utilizando o console de gerenciamen
 - Instalar aplicativo
 - Resumo sobre o sistema criado
 - Listagem dos aplicativos instalados
+- Desistalar aplicativo
 
 ## 📌 Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
