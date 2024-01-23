@@ -17,7 +17,7 @@ public class Nokia : Smartphone
     public override void InstalarAplicativo(string nomeApp)
     {
 
-        if (MemoriaInterna >= 2)
+        if (MemoriaInterna >= 2 && !Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
         {
             Aplicativos.Add(nomeApp);
             MemoriaInterna -= 2;
