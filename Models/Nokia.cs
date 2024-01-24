@@ -14,7 +14,7 @@ public class Nokia : Smartphone
   : base(numero, modelo, memoriaRam, memoriaInterna, marca)
     {
     }
-    public override void InstalarAplicativo(string nomeApp)
+    public override bool InstalarAplicativo(string nomeApp)
     {
 
         if (MemoriaInterna >= 2 && !Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
@@ -23,11 +23,13 @@ public class Nokia : Smartphone
             MemoriaInterna -= 2;
 
             Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no {Marca} - {Modelo}");
+            return true;
         }
         else
         {
-            Console.WriteLine($@"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente para a instalação,
-                Caso deseje, pode liberar espaço desistalando algum dos aplicativos existentes.");
+            Console.WriteLine($@"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
+            ou esse aplicativo já está instalado no sistema.");
+            return false;
         }
     }
 }
