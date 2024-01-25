@@ -9,12 +9,14 @@ public class IphoneTests
     Iphone iphone = new Iphone("81 9999-8888", "J5", 6, 32, "Iphone");
 
     [Fact]
-    public void RealizarChamada()
+    public void RealizarChamadaSemEstaEmOutraLigacao()
     {
+
         // Act e Assert
         Assert.True(iphone.Ligar());
 
     }
+
 
     [Fact]
     public void NaoLigarQuandoEstaEmOutraChamada()
@@ -85,11 +87,4 @@ public class IphoneTests
         Assert.False(iphone.DesistalarAplicativo("Zap"));
 
     }
-
-
-
-
-
-
-
 }

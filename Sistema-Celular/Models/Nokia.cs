@@ -25,11 +25,11 @@ public class Nokia : Smartphone
             Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no {Marca} - {Modelo}");
             return true;
         }
-        else
-        {
-            Console.WriteLine($@"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
+
+
+        Console.WriteLine($@"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
             ou esse aplicativo já está instalado no sistema.");
-            return false;
-        }
+        return false;
+
     }
 }

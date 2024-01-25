@@ -5,12 +5,12 @@ namespace DesafioPOO.Models;
 public abstract class Smartphone
 {
     public string Numero { get; set; }
-    protected string Modelo { get; set; }
-    protected int MemoriaRam { get; set; }
-    protected int MemoriaInterna { get; set; }
-    protected string Marca { get; set; }
+    public string Modelo { get; protected set; }
+    public int MemoriaRam { get; protected set; }
+    public int MemoriaInterna { get; protected set; }
+    public string Marca { get; protected set; }
     protected List<string> Aplicativos = new List<string>();
-    protected bool EstaEmLigacao = false;
+    private bool EstaEmLigacao = false;
 
     public Smartphone()
     {
@@ -18,11 +18,25 @@ public abstract class Smartphone
 
     public Smartphone(string numero, string modelo, int memoriaRam, int memoriaInterna, string marca)
     {
-        Numero = numero;
-        Modelo = modelo;
-        MemoriaRam = memoriaRam;
-        MemoriaInterna = memoriaInterna;
-        Marca = marca;
+        Numero = !string.IsNullOrWhiteSpace(numero)
+            ? numero
+            : throw new ArgumentNullException("numero", "O número não pode ser nulo, vazio ou conter apenas espaços em branco.");
+
+        Modelo = !string.IsNullOrWhiteSpace(modelo)
+                ? modelo
+                : throw new ArgumentNullException("modelo", "O modelo não pode ser nulo, vazio ou conter apenas espaços em branco.");
+
+        MemoriaRam = memoriaRam > 0
+            ? memoriaRam
+            : throw new ArgumentOutOfRangeException("memoriaRam", "A memória RAM deve ser maior que zero.");
+
+        MemoriaInterna = memoriaInterna > 0
+                ? memoriaInterna
+                : throw new ArgumentOutOfRangeException("memoriaInterna", "A memória interna deve ser maior que zero.");
+
+        Marca = !string.IsNullOrWhiteSpace(marca)
+                ? marca
+                : throw new ArgumentNullException("marca", "A marca não pode ser nula, vazia ou conter apenas espaços em branco.");
     }
 
     public void Informacoes()
@@ -72,11 +86,11 @@ public abstract class Smartphone
             Console.WriteLine($"Aplicativo {nomeApp} foi removido com sucesso do seu {Marca} - {Modelo}");
             return true;
         }
-        else
-        {
-            Console.WriteLine($"O aplicativo {nomeApp} não está instalado, por isso não será possivel remove-lo");
-            return false;
-        }
+
+
+        Console.WriteLine($"O aplicativo {nomeApp} não está instalado, por isso não será possivel remove-lo");
+        return false;
+
     }
 
 }
