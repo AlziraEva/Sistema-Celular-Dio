@@ -53,11 +53,10 @@ public abstract class Smartphone
             Console.WriteLine($"o Smartphone {Marca} - {Modelo} está ligando...");
             return true;
         }
-        else
-        {
-            Console.WriteLine($" o Smartphone {Marca} - {Modelo} Já está Realizando uma ligação...");
-            return false;
-        }
+
+        Console.WriteLine($" o Smartphone {Marca} - {Modelo} Já está Realizando uma ligação...");
+        return false;
+
     }
 
     public bool Desligar()
@@ -68,11 +67,10 @@ public abstract class Smartphone
             Console.WriteLine($"o Smartphone {Marca} - {Modelo} Desligou a ligação...");
             return true;
         }
-        else
-        {
-            Console.WriteLine($" o Smartphone {Marca} - {Modelo} Não está em ligação...");
-            return false;
-        }
+
+        Console.WriteLine($" o Smartphone {Marca} - {Modelo} Não está em ligação...");
+        return false;
+
     }
 
     public abstract bool InstalarAplicativo(string nomeApp);
@@ -86,7 +84,6 @@ public abstract class Smartphone
             Console.WriteLine($"Aplicativo {nomeApp} foi removido com sucesso do seu {Marca} - {Modelo}");
             return true;
         }
-
 
         Console.WriteLine($"O aplicativo {nomeApp} não está instalado, por isso não será possivel remove-lo");
         return false;

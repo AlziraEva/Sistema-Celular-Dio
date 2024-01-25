@@ -27,7 +27,6 @@ public class Iphone : Smartphone
             return true;
         }
 
-
         Console.WriteLine(@$"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
             ou esse aplicativo já está instalado no sistema");
         return false;
