@@ -9,11 +9,10 @@ O projeto foi desenvolvido no ambiente .NET, utilizando o console de gerenciamen
 ## 🔄 Funcionalidades
 - Criação de um sistema Smartphone com as propriedades número, modelo, memória RAM, memória interna e marca.
 - Realizar Ligação
-- Receber ligação
-- Instalar aplicativo
-- Resumo sobre o sistema criado
-- Listagem dos aplicativos instalados
-- Desistalar aplicativo
+- Desligar Ligação
+- Instalar Aplicativo
+- Desistalar Aplicativo
+- Informações sobre o sistema criado
 
 ## 📌 Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
