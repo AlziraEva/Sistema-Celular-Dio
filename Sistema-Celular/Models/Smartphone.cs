@@ -10,7 +10,7 @@ public abstract class Smartphone
     public int MemoriaInterna { get; protected set; }
     public string Marca { get; protected set; }
     protected List<string> Aplicativos = new List<string>();
-    private bool EstaEmLigacao = false;
+    private bool NaoEstaEmLigacao = false;
 
     public Smartphone()
     {
@@ -18,13 +18,13 @@ public abstract class Smartphone
 
     public Smartphone(string numero, string modelo, int memoriaRam, int memoriaInterna, string marca)
     {
-        Numero = !string.IsNullOrWhiteSpace(numero)
-            ? numero
-            : throw new ArgumentNullException("numero", "O número não pode ser nulo, vazio ou conter apenas espaços em branco.");
+        Numero = string.IsNullOrWhiteSpace(numero)
+            ? throw new ArgumentNullException("numero", "O número não pode ser nulo, vazio ou conter apenas espaços em branco.")
+            : numero;
 
-        Modelo = !string.IsNullOrWhiteSpace(modelo)
-                ? modelo
-                : throw new ArgumentNullException("modelo", "O modelo não pode ser nulo, vazio ou conter apenas espaços em branco.");
+        Modelo = string.IsNullOrWhiteSpace(modelo)
+                ? throw new ArgumentNullException("modelo", "O modelo não pode ser nulo, vazio ou conter apenas espaços em branco.")
+                : modelo;
 
         MemoriaRam = memoriaRam > 0
             ? memoriaRam
@@ -34,9 +34,9 @@ public abstract class Smartphone
                 ? memoriaInterna
                 : throw new ArgumentOutOfRangeException("memoriaInterna", "A memória interna deve ser maior que zero.");
 
-        Marca = !string.IsNullOrWhiteSpace(marca)
-                ? marca
-                : throw new ArgumentNullException("marca", "A marca não pode ser nula, vazia ou conter apenas espaços em branco.");
+        Marca = string.IsNullOrWhiteSpace(marca)
+                ? throw new ArgumentNullException("marca", "A marca não pode ser nula, vazia ou conter apenas espaços em branco.")
+                : marca;
     }
 
     public void Informacoes()
@@ -47,23 +47,23 @@ public abstract class Smartphone
 
     public bool Ligar()
     {
-        if (!EstaEmLigacao)
+        if (NaoEstaEmLigacao)
         {
-            EstaEmLigacao = true;
-            Console.WriteLine($"o Smartphone {Marca} - {Modelo} está ligando...");
-            return true;
+            Console.WriteLine($" o Smartphone {Marca} - {Modelo} Já está Realizando uma ligação...");
+            return false;
         }
 
-        Console.WriteLine($" o Smartphone {Marca} - {Modelo} Já está Realizando uma ligação...");
-        return false;
+        NaoEstaEmLigacao = true;
+        Console.WriteLine($"o Smartphone {Marca} - {Modelo} está ligando...");
+        return true;
 
     }
 
     public bool Desligar()
     {
-        if (EstaEmLigacao)
+        if (NaoEstaEmLigacao)
         {
-            EstaEmLigacao = false;
+            NaoEstaEmLigacao = false;
             Console.WriteLine($"o Smartphone {Marca} - {Modelo} Desligou a ligação...");
             return true;
         }
@@ -79,7 +79,7 @@ public abstract class Smartphone
     {
         if (Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
         {
-            Aplicativos.Remove(nomeApp);
+            Aplicativos.Remove(nomeApp.ToUpper());
             MemoriaInterna += 1;
             Console.WriteLine($"Aplicativo {nomeApp} foi removido com sucesso do seu {Marca} - {Modelo}");
             return true;
@@ -87,7 +87,6 @@ public abstract class Smartphone
 
         Console.WriteLine($"O aplicativo {nomeApp} não está instalado, por isso não será possivel remove-lo");
         return false;
-
     }
 
 }

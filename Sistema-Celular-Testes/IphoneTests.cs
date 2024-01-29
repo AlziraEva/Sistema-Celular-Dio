@@ -9,7 +9,7 @@ public class IphoneTests
     Iphone iphone = new Iphone("81 9999-8888", "J5", 6, 32, "Iphone");
 
     [Fact]
-    public void RealizarChamadaSemEstaEmOutraLigacao()
+    public void RealizarChamadaSemEstaEmOutraLigacaoRetornarTrue()
     {
 
         // Act e Assert
@@ -19,7 +19,7 @@ public class IphoneTests
 
 
     [Fact]
-    public void NaoLigarQuandoEstaEmOutraChamada()
+    public void NaoLigarQuandoEstaEmOutraChamadaChamarMetodoLigar2VezesERetornarFalse()
     {
 
         iphone.Ligar();
@@ -29,7 +29,7 @@ public class IphoneTests
     }
 
     [Fact]
-    public void DesligarLigacaoComChamadaLigada()
+    public void DesligarLigacaoEmChamadaLigadaChamarMetodoLigarEMetodoDesligarRetornarTrue()
     {
         iphone.Ligar();
 
@@ -38,7 +38,7 @@ public class IphoneTests
     }
 
     [Fact]
-    public void NaoDesligarNovamenteQuandoChamadaJaDesligada()
+    public void NaoDesligarNovamenteQuandoChamadaDesligadaChamarMetodoDesligar2VezesERetornarFalse()
     {
         iphone.Desligar();
 
@@ -47,23 +47,23 @@ public class IphoneTests
     }
 
     [Fact]
-    public void InstalarAplicativoComMemoriaSuficiente()
+    public void InstalarAplicativoComMemoriaInternaIgualHa32RetornarTrue()
     {
         Assert.True(iphone.InstalarAplicativo("Zap"));
 
     }
 
     [Fact]
-    public void NaoInstalarAplicadoComMemoriaInsuficiente()
+    public void NaoInstalarAplicadoComMemoriaInternaIgualHa1RetornarFalse()
     {
-        Iphone iphone2 = new Iphone("81 9999-8888", "J5", 6, 0, "Iphone");
+        Iphone iphone2 = new Iphone("81 9999-8888", "J5", 6, 1, "Iphone");
 
         Assert.False(iphone2.InstalarAplicativo("Zap"));
 
     }
 
     [Fact]
-    public void NaoInstalarAplicadoComNomeIgual()
+    public void NaoInstalarAplicadoComNomesIguaisChamarMetodoInstalarAplicativoComParametrosIguaisERetornarFalse()
     {
         iphone.InstalarAplicativo("Zap");
 
@@ -72,7 +72,7 @@ public class IphoneTests
     }
 
     [Fact]
-    public void DesistalarAplicativoQueExisteNaLista()
+    public void DesistalarAplicativoQueExisteNaListaChamarMetodoInstalarAplicativoEChamarMetodoDesistalarAplicativoComMesmoParametroERetornarTrue()
     {
         iphone.InstalarAplicativo("Zap");
 
@@ -81,7 +81,7 @@ public class IphoneTests
     }
 
     [Fact]
-    public void NaoDesistalarAplicativoQueNaoExisteNaLista()
+    public void NaoDesistalarAplicativoQueNaoExisteNaListaChamarMetodoDesistalarAplicativoComParametroQueNaoExisteNaListaERetornarFalse()
     {
 
         Assert.False(iphone.DesistalarAplicativo("Zap"));

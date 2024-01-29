@@ -19,19 +19,18 @@ public class Iphone : Smartphone
     }
     public override bool InstalarAplicativo(string nomeApp)
     {
-        if (MemoriaInterna >= 1 && !Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
+        if (MemoriaInterna < 2 || Aplicativos.Any(a => a.ToUpper() == nomeApp.ToUpper()))
         {
-            Aplicativos.Add(nomeApp);
-            MemoriaInterna -= 1;
-            Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no {Marca} - {Modelo}");
-            return true;
+            Console.WriteLine(@$"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
+            ou esse aplicativo já está instalado no sistema");
+            return false;
         }
 
-        Console.WriteLine(@$"Seu Smartphone {Marca} - {Modelo} não possui memória suficiente
-            ou esse aplicativo já está instalado no sistema");
-        return false;
+        Aplicativos.Add(nomeApp.ToUpper());
+        MemoriaInterna -= 1;
 
-
+        Console.WriteLine($" O aplicativo {nomeApp} foi instalado com sucesso no {Marca} - {Modelo}");
+        return true;
     }
 
 }

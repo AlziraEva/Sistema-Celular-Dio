@@ -8,14 +8,14 @@ public class NokiaTests
     Nokia nokia = new Nokia("81 9999-8888", "J5", 6, 32, "Nokia");
 
     [Fact]
-    public void InstalarAplicativoComMemoriaSuficiente()
+    public void InstalarAplicativoComMemoriaInternaIgualAh32ERetornarTrue()
     {
         Assert.True(nokia.InstalarAplicativo("Zap"));
 
     }
 
     [Fact]
-    public void NaoInstalarAplicadoComMemoriaInsuficiente()
+    public void NaoInstalarAplicadoComMemoriaInternaIgualAh1RetornarFalse()
     {
         Nokia nokia2 = new Nokia("81 9999-8888", "J5", 6, 1, "Iphone");
 
@@ -24,7 +24,7 @@ public class NokiaTests
     }
 
     [Fact]
-    public void NaoInstalarAplicadoComNomeIgual()
+    public void NaoInstalarComNomeIgualChamarMetodoInstalarAplicativoComParametroIgual2VezesERetornarFalse()
     {
         nokia.InstalarAplicativo("Zap");
 
